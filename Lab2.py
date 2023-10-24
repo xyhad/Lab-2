@@ -1,3 +1,5 @@
+import statistics
+
 print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5,67,32): ")
@@ -22,12 +24,16 @@ def find_min_max(float_list):
 def sort_temperature():
     print("sort_temperature")
 
-def calc_median_temperature():
-    print("calc_median_temperature")
+def calc_median_temperature(float_list):
+    list = sorted(float_list)
+    median_val = statistics.median(float_list)
+    print("The median value is: " + str(median_val))
+    return median_val
 
 display_main_menu()
 y = get_user_input()
 average = calc_average(y)
 print("Average = " + str(average))
 find_min_max(y)
+calc_median_temperature(y)
 
