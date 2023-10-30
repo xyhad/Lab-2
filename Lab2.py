@@ -30,10 +30,13 @@ def calc_median_temperature(float_list):
     print("The median value is: " + str(median_val))
     return median_val
 
-display_main_menu()
-y = get_user_input()
-average = calc_average(y)
-print("Average = " + str(average))
-find_min_max(y)
-calc_median_temperature(y)
+def main():
+    display_main_menu()
+    y = get_user_input()
+    average = calc_average(y)
+    print("Average = " + str(average))
+    find_min_max(y)
+    calc_median_temperature(y)
+if __name__ == "__main__":
+    main()
 
