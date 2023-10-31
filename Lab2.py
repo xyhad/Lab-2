@@ -16,10 +16,9 @@ def calc_average(float_list):
     return average
 
 def find_min_max(float_list):
-    x = min(float_list)
-    y = max(float_list)
-    print("Minimum value is: " + str(x))
-    print("Maxmimum value is: " + str(y))
+    minimum = min(float_list)
+    maximum = max(float_list)
+    return minimum, maximum
 
 def sort_temperature():
     print("sort_temperature")
@@ -35,7 +34,8 @@ def main():
     y = get_user_input()
     average = calc_average(y)
     print("Average = " + str(average))
-    find_min_max(y)
+    min, max = find_min_max(y)
+    print("Minimum = " + str(min) + ", Maximum = " + str(max))
     calc_median_temperature(y)
 if __name__ == "__main__":
     main()
